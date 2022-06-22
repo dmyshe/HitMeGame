@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GameOverPopup" customModule="HitMeGame" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="oGn-aK-NP1" id="6ua-dz-0Lz"/>
+                <outlet property="view" destination="c22-O7-iKe" id="i1M-IE-77k"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="253" height="178"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oGn-aK-NP1">
+                    <rect key="frame" x="85" y="76" width="84" height="26"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="You lose" id="m1a-Qd-JfC">
+                        <font key="font" metaFont="system" size="22"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3E1-kh-ZFA">
+                    <rect key="frame" x="93" y="28" width="67" height="32"/>
+                    <buttonCell key="cell" type="push" title="close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="s3f-cf-W0W">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="dismiss:" target="-2" id="kTM-87-pcb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="3E1-kh-ZFA" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="100" id="HOU-q6-UU4"/>
+                <constraint firstAttribute="bottom" secondItem="3E1-kh-ZFA" secondAttribute="bottom" constant="35" id="P16-OO-8Uz"/>
+                <constraint firstItem="oGn-aK-NP1" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="Y55-bC-wzN"/>
+                <constraint firstAttribute="trailing" secondItem="3E1-kh-ZFA" secondAttribute="trailing" constant="100" id="ePz-cX-REk"/>
+                <constraint firstItem="oGn-aK-NP1" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="pxm-H6-sSG"/>
+                <constraint firstItem="3E1-kh-ZFA" firstAttribute="top" secondItem="oGn-aK-NP1" secondAttribute="bottom" constant="21" id="z2O-UB-7jh"/>
+            </constraints>
+            <point key="canvasLocation" x="31.5" y="110.5"/>
+        </customView>
+    </objects>
+</document>
